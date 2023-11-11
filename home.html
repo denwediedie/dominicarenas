@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-color: dimgrey;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .nav{
+        font-size: 18px;
+        font-weight: 500;
+        transition: .5s;
+    }
+    .nav:hover{
+        color: blue;
+        cursor: pointer;
+    }
+    .info1{
+        font-size: 32px;
+    }
+    .info2{
+        margin-left: 15%;
+    }
+    .btn {
+    background-color: dimgrey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+    background-color: darkslategrey;
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .info1 {
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #ffffff 0%,
+    #c5bdcd 29%,
+    #c8b4ba 67%,
+    #1c1c1a 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 55%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.info2:hover .image {
+  opacity: 0.3;
+}
+
+.info2:hover .middle {
+  opacity: 1;
+}
+.container-fluid {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+<body>
+    <div class="navbar ps-2">
+        <div class="navbar-brand ps-4">JD Arenas</div>
+        <div class="nav pe-5">
+        <ul>
+            <a href="home.html" class="btn fs-5 p-3 text-light">Home</a>
+            <a href="about.html" class="btn fs-5 p-3 text-light">About</a>
+            <a href="hobbies.html" class="btn fs-5 p-3 text-light">Hobbies</a>
+            <a href="contact.html" class="btn fs-5 p-3 text-light">Contact</a>
+        </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="info1 col p-5">
+                <h1 class="text-light pb-3">Hello! I'm Joseph Dominic B. Arenas</h1>
+                <h4 class="text-light pb-4">A Bachelor of Science in Information Technology Student</h4>
+            </div>
+            <div class="info2 col pe-4">
+                <img src="images/pic1.jpg" alt="" class="image w-75 rounded-circle ms-4">
+                <center><a href="about.html" class="middle btn btn-transparent text-decoration-underline fs-5 text-light me-5">More About Me!</a></center>
+            </div>
+        </div>
+    </div>
+    <div class="icons">
+        <a href=""><i class='bx bxl-facebook-circle'></i></a>
+        <a href=""><i class='bx bxl-twitter'></i></a>
+        <a href=""><i class='bx bxl-instagram'  ></i></a>
+    </div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-color: dimgrey;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .nav{
+        font-size: 18px;
+        font-weight: 500;
+        transition: .5s;
+    }
+    
+    .row{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: dimgrey;
+    }
+    .about-col-1{
+      flex-basis: 35%;
+    }
+    .about-col-1 img{
+      width: 100%;
+      border-radius: 30px;
+
+    }
+    .about-col-2{
+      flex-basis: 60%;
+      
+    }
+    .sub-title{
+      font-size: 60px;
+      font-weight: 600;
+      color: rgb(6, 176, 255);
+    }
+    .tab-titles{
+      display: flex;
+      margin: 20px 0 40px;
+    }
+    .tab-links{
+      margin-right: 50px;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+    }
+    .tab-links::after{
+      content: '';
+      width: 0;
+      height: 3px;
+      background: white;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      transition: 1s;
+    }
+    .tab-links.active-link::after{
+      width: 50%;
+    }
+    .tab-contents ul li{
+      list-style: none;
+      margin: 10px 0;
+    }
+    .tab-contents ul li span{
+      color: rgb(46, 68, 233);
+      font-size: 14px;
+    }
+    .tab-contents{
+      display: none;
+    }
+    .tab-contents.active-tab{
+      display: block;
+    }
+    .card{
+        background-color: dimgrey;
+    }
+    .btn {
+    background-color: dimgrey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+    background-color: darkslategrey;
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .sub-title {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    h5 {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    h1 {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    .container {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    .container-sm {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    .row {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    .accordion-collapse {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+<body>
+    <div class="navbar ps-2">
+        <div class="navbar-brand ps-4">JD Arenas</div>
+        <div class="nav pe-5">
+            <a href="home.html" class="btn fs-5 p-3 text-light">Home</a>
+            <a href="about.html" class="btn fs-5 p-3 text-light">About</a>
+            <a href="hobbies.html" class="btn fs-5 p-3 text-light">Hobbies</a>
+            <a href="contact.html" class="btn fs-5 p-3 text-light">Contact</a>
+        </div>
+    </div>
+    <div class="container"> 
+        <div class="row"> 
+            <div id="carouselExampleInterval" class="carousel slide about-col-1 pt-5 mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="images/pic2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/pic1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div> 
+        <div class="about-col-2 pt-4">
+          <h1 class="sub-title text-white">About</h1>
+          <p><h5>I am Bachelor of Science in Information Technology (BSIT) student, I study at Bulacan Agricultural State College
+            and already in 3rd Year. I was born in the 20th of February, year 2004. I find this course challenging that's why I pick this course
+            and also someday I want to be a game developer which I will make my own game for everyone. I want to explore new things and when the
+            situation for me goes hard, I always and willing to accept it as a challenge that will make me grow and more ready for the outsite world.</h5>
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')" > Knowledge About Coding</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <h3>HTML</h3>
+      <div class="progress">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 40%;">
+              40%
+          </div>
+      </div>
+      <h3>Javascript</h3>
+      <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width:10%;">
+              10%
+          </div>
+      </div>
+      <h3>PHP</h3>
+      <div class="progress">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;">
+              25%
+          </div>
+      </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<center><h1 class="mt-5">Achievements/Other Information</h1></center>
+
+<div class="container-sm mt-5">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Information About Me!
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row bg-light">
+            <div class="col">
+              <strong>Birthday: </strong> <p class="mb-4">February 20, 2004</p>
+              <strong>Age: </strong> <p class="mb-4">19</p>
+            </div>
+            <div class="col">
+              <strong>Height: </strong> <p class="mb-4">5'10 (ft)/179 (cm)</p>
+              <strong>Zodiac Sign: </strong> <p class="mb-4">Pisces</p>
+            </div>
+            <div class="col">
+              <strong>Nationality: </strong> <p class="mb-4">Filipino</p>
+              <strong>Religion: </strong> <p class="mb-4">Roman Catholic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Educational Background!
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Primary: </strong> <p>Salacot Elementary School (2008-2014)</p>
+          <strong>Secodary: </strong> <p>Vedasto R. Santiago High School (2014-2020)</p>
+          <strong>Tertiary: </strong> <p>Bulacan Agricultural State College/Bulacan State Agricultural University (2020-Present)</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Achievements!
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>3rd Grade: </strong> <p>3rd Place in Tula (Buwan ng Wika)</p>
+          <strong>5th Grade: </strong> <p>4th Place in Science Journalism</p>
+          <strong>7th Grade: </strong> <p>Gold Medad in Arnis (Intramurals, Half Lightweight Division)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links"); 
+        var tabcontents = document.getElementsByClassName("tab-contents"); 
+        
+        function opentab(tabname){ 
+          for(tablink of tablinks){ 
+            tablink.classList.remove("active-link"); 
+        }
+        for(tabcontent of tabcontents){ 
+          tabcontent.classList.remove("active-tab"); 
+        } 
+        event.currentTarget.classList.add("active-link"); 
+        document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

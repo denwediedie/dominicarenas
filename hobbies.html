@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-color: dimgrey;
+    }
+    .navbar-brand{
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .nav{
+        font-size: 18px;
+        font-weight: 500;
+        transition: .5s;
+    }
+    .nav:hover{
+        color: blue;
+        cursor: pointer;
+    }
+    .card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.2s; 
+    }
+
+    .card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    border-color: #007bff; 
+    }
+    .btn {
+    background-color: dimgrey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+    background-color: darkslategrey;
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .container {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    h1 {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+<body>
+    <div class="navbar ps-2">
+        <div class="navbar-brand ps-4">JD Arenas</div>
+        <div class="nav pe-5">
+            <a href="home.html" class="btn fs-5 p-3 text-light">Home</a>
+            <a href="about.html" class="btn fs-5 p-3 text-light">About</a>
+            <a href="hobbies.html" class="btn fs-5 p-3 text-light">Hobbies</a>
+            <a href="contact.html" class="btn fs-5 p-3 text-light">Contact</a>
+        </div>
+    </div>
+    <center><h1 class="text-light">What I Do</h1></center>
+    <div class="container">
+        <div class="row pt-5 mt-3">
+            <div class="col card me-5">
+                <center><img src="images/sports.png" alt="" class="w-50"></center>
+                <h4 class="card-title text-center">Playing Sports</h4>
+                <p class="card-body">I like sports because it is fun to play and you can make friends, by also doing
+                    this is very beneficial to our physical health</p>
+            </div>
+            <div class="col card me-5">
+                <center><img src="images/cooking.png" alt="" class="w-50"></center>
+                <h4 class="card-title text-center">Cooking</h4>
+                <p class="card-body">I love doing this because I also love to eat and it is fun to do, I usually to this when I have free time.
+                    Most of the dishes I've made is from what I saw in the social media platforms that I think it is fun to cook.</p>
+            </div>
+            <div class="col card me-5">
+                <center><img src="images/sleep.png" alt="" class="w-50"></center>
+                <h4 class="card-title text-center">Sleeping</h4>
+                <p class="card-body">Sleeping is one of my favortie hobby because this thing gives me energy to continue
+                  the things I need to do in my everyday life.</p>
+            </div>
+        </div>
+        <div class="row pt-5 mt-3">
+            <div class="col card me-5">
+                <center><img src="images/watch.png" alt="" class="w-50"></center>
+                <h4 class="card-title text-center">Watching</h4>
+                <p class="card-body">I love watching movies/random videos because it is a time killer, when I don't
+                    have enough energy, I just lay down to get some rest and use my smartphone to watch.
+                </p>
+            </div>
+            <div class="col card me-5">
+                <center><img src="images/dog.png" alt="" class="w-50"></center>
+                <h4 class="card-title text-center">Playing With My Dog</h4>
+                <p class="card-body">I love doing this specially when I get home from school, because my dogs are
+                    always happy even I don't have food for them when I get home.
+                </p>
+            </div>
+            <div class="col card me-5">
+                <center><img src="images/friends.png" alt="" class="w-50"></center>
+                <h4 class="card-title text-center">Hanging Out With Friends</h4>
+                <p class="card-body">I like it when I am with my friends, because they brought joy in me
+                    and it is also fun when I'm with them and talking just to some random things.
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
